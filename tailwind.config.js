@@ -21,6 +21,12 @@ module.exports = {
       },
       fontSize:{
         '16':'1rem'
+      },
+      backgroundColor:{
+        'blue':'#183155'
+      },
+      fontSize:{
+        '3rem':'3rem'
       }
     },
   },
