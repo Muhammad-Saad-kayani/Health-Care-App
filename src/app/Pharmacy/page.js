@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../Components/Footer';
 import Card1 from '../Components/Card1';
+import Slider from '../Components/slider';
 
 const NavBar = () => {
   const [dropdown, setDropdown] = useState(null);
@@ -177,6 +178,7 @@ const NavBar = () => {
         </section>
       </nav>
       <div className=""><h1 className=""></h1></div>
+      <Slider/>
       <Card1/>
       <Footer/>
     </>
