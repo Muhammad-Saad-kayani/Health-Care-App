@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-
+import Image from 'next/image';
 
 const NavBar = () => {
   const [modalType, setModalType] = useState(null);
@@ -21,8 +21,8 @@ const NavBar = () => {
           <section className="logo flex items-center gap-2">
             <div>
               <img
-                src=""
-                alt=""
+                src="/logo.png"
+                alt="Logo"
                 width={40}
                 height={40}
               />
