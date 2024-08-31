@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const NavBar = () => {
   const [modalType, setModalType] = useState(null);
@@ -76,17 +77,17 @@ const NavBar = () => {
         {/* Bottom Row with Navigation Links */}
         <section className="navsec nav-links w-full py-2 flex justify-between gap-8">
           <div className="flex justify-center gap-8">
-            <a href="/" className="text-blue-900 hover:underline">
+            <Link href="/" className="text-blue-900 hover:underline">
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/Pharmacy"
               onMouseEnter={() => handleModalOpen('pharmacy')}
               onMouseLeave={handleModalClose}
               className="text-blue-900 hover:underline"
             >
               Pharmacy
-            </a>
+            </Link>
             <a
               href="#"
               onMouseEnter={() => handleModalOpen('labTests')}
