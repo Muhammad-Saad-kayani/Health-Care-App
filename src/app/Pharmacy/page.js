@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '../Components/Footer';
+import Card1 from '../Components/Card1';
 
 const NavBar = () => {
   const [dropdown, setDropdown] = useState(null);
@@ -117,8 +119,8 @@ const NavBar = () => {
                   onMouseEnter={handleDropdownContentMouseEnter}
                   onMouseLeave={handleDropdownContentMouseLeave}
                 >
-                  <Link href="/medications/medication1" className="block px-6 py-2 hover:bg-gray-100">Bone And Joint Pain</Link>
-                  <Link href="/medications/medication2" className="block px-6 py-2 hover:bg-gray-100">Medication 2</Link>
+                  <Link href="/Bone-And-Joint-Pain" className="block px-6 py-2 hover:bg-gray-100">Bone And Joint Pain</Link>
+                  <Link href="/Cardiac-care" className="block px-6 py-2 hover:bg-gray-100">Cardiac Care</Link>
                 </div>
               )}
             </div>
@@ -136,8 +138,8 @@ const NavBar = () => {
                   onMouseEnter={handleDropdownContentMouseEnter}
                   onMouseLeave={handleDropdownContentMouseLeave}
                 >
-                  <Link href="/wellness/beauty1" className="block px-4 py-2 hover:bg-gray-100">Beauty 1</Link>
-                  <Link href="/wellness/beauty2" className="block px-4 py-2 hover:bg-gray-100">Beauty 2</Link>
+                  <Link href="/wellness/beauty1" className="block px-4 py-2 hover:bg-gray-100">Hair And Nails Care</Link>
+                  <Link href="/wellness/beauty2" className="block px-4 py-2 hover:bg-gray-100">Oral Hygiene</Link>
                 </div>
               )}
             </div>
@@ -155,8 +157,8 @@ const NavBar = () => {
                   onMouseEnter={handleDropdownContentMouseEnter}
                   onMouseLeave={handleDropdownContentMouseLeave}
                 >
-                  <Link href="/devices/device1" className="block px-4 py-2 hover:bg-gray-100">Device 1</Link>
-                  <Link href="/devices/device2" className="block px-4 py-2 hover:bg-gray-100">Device 2</Link>
+                  <Link href="/devices/device1" className="block px-4 py-2 hover:bg-gray-100">Devices</Link>
+                  <Link href="/devices/device2" className="block px-4 py-2 hover:bg-gray-100">Drips</Link>
                 </div>
               )}
             </div>
@@ -174,7 +176,9 @@ const NavBar = () => {
           </div>
         </section>
       </nav>
-      <div className=""><h1 className="">hello</h1></div>
+      <div className=""><h1 className=""></h1></div>
+      <Card1/>
+      <Footer/>
     </>
   );
 };
