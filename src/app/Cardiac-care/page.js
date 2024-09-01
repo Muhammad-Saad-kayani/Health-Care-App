@@ -1,5 +1,9 @@
 import React from 'react'
 import Image from 'next/image';
+import Footer  from '../Components/Footer';
+import NestedNav from '../Components/NestedNav';
+
+
 export const Cardsdata = [
   {
     img:"/sec1img1.png",
@@ -92,7 +96,8 @@ export const Cardsdata = [
 const CardiacCare = () => {
   return (
     <>
-    <h1 className='text-2xl font-bold'>Medications</h1>
+    <NestedNav/>
+    <h1 className='text-2xl font-bold mt-10'>Medications</h1>
     <div className=" pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
     {Cardsdata.map((card, index) => (
       <div key={index} className="p-4 shadow-sm">
@@ -104,6 +109,7 @@ const CardiacCare = () => {
       </div>
     ))}
   </div>
+  <Footer/>
   </>
   )
 }
