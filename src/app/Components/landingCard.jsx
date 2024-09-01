@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 function LandingCard() {
   return (
     <section className="w-full flex items-center justify-center mt-10 p-4">
@@ -35,7 +36,6 @@ function LandingCard() {
                 </a>
                 
             </div>
-
             
         </div>
     </section>

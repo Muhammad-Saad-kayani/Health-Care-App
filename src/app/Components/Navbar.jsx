@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import NavLinks from './NavLinks';
 import Link from 'next/link';
 
 const NavBar = () => {
@@ -80,6 +81,8 @@ const NavBar = () => {
             <Link href="/" className="text-blue-900 hover:underline">
               Home
             </Link>
+            
+            { /* CHECKING..... <NavLinks href="/" name="Home" /> */}
             <Link
               href="/Pharmacy"
               onMouseEnter={() => handleModalOpen('pharmacy')}

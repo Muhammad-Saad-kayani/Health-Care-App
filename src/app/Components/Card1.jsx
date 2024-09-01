@@ -32,7 +32,8 @@ const Card1 = () => {
     {Cardsdata.map((card, index) => (
       <div key={index} className="p-4 shadow-sm">
 
-      <div className='bg-slate-100 w-56 h-28 py-2 pl-4' >  <img className='w-48 h-20 bg-slate-300' src={card.img} alt={card.title} /></div>
+      <div className='bg-slate-100 w-56 h-28 py-2 pl-4' > 
+        <img className='w-48 h-20 bg-slate-300' src={card.img} alt={card.title} /></div>
         <p className="PARA pt-4">{card.title}</p>
         <p className="text-xs pt-2">${card.price}</p>
         <button className='btn w-20 h-7  mt-5  text-center text-xs'>Add To Cart</button>
