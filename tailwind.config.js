@@ -23,10 +23,19 @@ module.exports = {
         '16':'1rem'
       },
       backgroundColor:{
-        'blue':'#183155'
+        'blue':'#183155',
+        'gre':'#ebfaf8',
+        'ble':'#edf3fc',
+        'blehover':'#CBC3E4',
+        'grehover':'#d4e8e6',
       },
       fontSize:{
         '3rem':'3rem'
+      },
+      textColor:{
+        'darkgreen':'#183155',
+        'lightgreen':'#1e4275',
+        'icngreen':'#121314',
       }
     },
   },
