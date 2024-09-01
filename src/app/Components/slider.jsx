@@ -18,7 +18,8 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className="relative w-full h-64 overflow-hidden">
+    <section className='slider w-full flex items-center justify-center p-4'>
+    <div className="navsec relative w-full h-80 rounded-xl overflow-hidden">
       {images.map((image, index) => (
         <div
           key={index}
@@ -32,5 +33,6 @@ export default function Slider() {
         </div>
       ))}
     </div>
+    </section>
   );
 }
