@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import NavBar from '../Components/NavForPhar';
 import NavForPhar from '../Components/NavForPhar';
+import Footer from '../Components/Footer';
 
 export const Cardsdata = [
   {
@@ -97,17 +98,18 @@ const CardiacCare = () => {
     <>
     <NavForPhar/>
     <h1 className='text-2xl font-bold'>Medications</h1>
-    <div className=" pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
+    <div className=" w-full justify-items-center   pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
     {Cardsdata.map((card, index) => (
       <div key={index} className="p-4 shadow-sm">
 
-      <div className='bg-slate-100 w-56 h-28 py-2 pl-4' >  <img className='w-48 h-20 bg-slate-300' src={card.img} alt={card.title} /></div>
+      <div className=' navsec bg-slate-100 w-56 h-28 py-2 pl-4' >  <img className='w-48 h-20 bg-slate-300' src={card.img} alt={card.title} /></div>
         <p className="PARA pt-4">{card.title}</p>
         <p className="text-xs pt-2">${card.price}</p>
         <button className='btn w-20 h-7  mt-5  text-center text-xs'>Add To Cart</button>
       </div>
     ))}
   </div>
+  <Footer/>
   </>
   )
 }
