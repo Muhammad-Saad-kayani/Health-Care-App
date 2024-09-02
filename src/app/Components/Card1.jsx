@@ -28,7 +28,7 @@ const Card1 = () => {
   return (
     <>
     <section className='w-full flex justify-center'>
-    <div className="navsec w-full justify-items-center pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
+    <div className="navsec w-full justify-items-center pt-8 grid gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
     {Cardsdata.map((card, index) => (
       <div key={index} className="p-4 shadow-sm">
 

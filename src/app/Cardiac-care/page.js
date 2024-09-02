@@ -1,5 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
+import NavBar from '../Components/NavForPhar';
+import NavForPhar from '../Components/NavForPhar';
+
 export const Cardsdata = [
   {
     img:"/sec1img1.png",
@@ -92,6 +95,7 @@ export const Cardsdata = [
 const CardiacCare = () => {
   return (
     <>
+    <NavForPhar/>
     <h1 className='text-2xl font-bold'>Medications</h1>
     <div className=" pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
     {Cardsdata.map((card, index) => (
