@@ -8,7 +8,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
 function Footer() {
   return (
-    <footer className="w-full  bg-blue">
+    <footer className="w-full  bg-blue mt-5">
       <section className="navsec w-full flex gap-12 mb-2 py-8">
         <div className="flex py-2 flex-wrap w-72">
           <div className="img rounded">

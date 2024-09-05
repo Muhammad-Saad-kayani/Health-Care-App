@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="w-full bg-white py-5 px-10 flex flex-wrap gap-2 shadow-custom-light">
+      <nav className="w-full bg-white py-5 px-10 flex flex-wrap gap-2 shadow-custom-light fixed top-0 z-50">
         {/* Top Row */}
         <section className="navsec w-full flex items-center justify-between mb-2">
           <section className="logo flex items-center gap-2">
