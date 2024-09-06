@@ -26,7 +26,7 @@ module.exports = {
         'blue':'#183155',
         'gre':'#ebfaf8',
         'ble':'#edf3fc',
-        'blehover':'#CBC3E4',
+        'blehover':'#d1def7',
         'grehover':'#d4e8e6',
       },
       fontSize:{
