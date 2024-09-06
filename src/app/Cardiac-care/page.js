@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image';
-import NavBar from '../Components/NavForPhar';
 import NavForPhar from '../Components/NavForPhar';
-import Footer from '../Components/Footer';
+import Footer  from '../Components/Footer';
+
+
+
 
 export const Cardsdata = [
   {
@@ -96,9 +98,12 @@ export const Cardsdata = [
 const CardiacCare = () => {
   return (
     <>
+
+    
     <NavForPhar/>
-    <h1 className='text-2xl font-bold'>Medications</h1>
-    <div className=" w-full justify-items-center   pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
+    <h1 className='text-2xl font-bold mt-10'>Medications</h1>
+    <div className=" pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
+
     {Cardsdata.map((card, index) => (
       <div key={index} className="p-4 shadow-sm">
 
