@@ -1,9 +1,14 @@
 import React from 'react'
 import Image from 'next/image';
+<<<<<<< HEAD
 import NavForPhar from '../Components/NavForPhar';
 import Footer  from '../Components/Footer';
 
 
+=======
+import Footer  from '../Components/Footer';
+import NestedNav from '../Components/NestedNav';
+>>>>>>> ammar
 
 
 export const Cardsdata = [
@@ -98,9 +103,13 @@ export const Cardsdata = [
 const CardiacCare = () => {
   return (
     <>
+<<<<<<< HEAD
 
     
     <NavForPhar/>
+=======
+    <NestedNav/>
+>>>>>>> ammar
     <h1 className='text-2xl font-bold mt-10'>Medications</h1>
     <div className=" pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
 

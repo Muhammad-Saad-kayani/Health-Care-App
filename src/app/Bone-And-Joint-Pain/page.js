@@ -1,122 +1,179 @@
 import React from 'react'
 import Image from 'next/image';
-import NavForPhar from '../Components/NavForPhar';
-import Footer  from '../Components/Footer';
+import Link from 'next/link';
+import Card1 from '../Components/Card1';
 
+const page = () => {
+  const [dropdown, setDropdown] = useState(null);
+  const [timeoutId, setTimeoutId] = useState(null);
+  const dropdownRef = useRef(null);
 
+  const handleDropdownOpen = (type) => {
+    if (timeoutId) clearTimeout(timeoutId);
+    setDropdown(type);
+  };
 
+  const handleDropdownClose = () => {
+    // Set a timeout to delay hiding the dropdown
+    const id = setTimeout(() => {
+      setDropdown(null);
+    }, 300); // Adjust the delay as needed
+    setTimeoutId(id);
+  };
 
-export const Cardsdata = [
-  {
-    img:"/BonesImg1.webp",
-    title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2"
-  },
-  {
-    img:"BonesImg2.webp",
-    title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67"
-  },
-  {
-    img:"/BonesImg3.webp",
-    title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5"
-  },
-  {
-    img:"BonesImg4.webp",
-    title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5"
-  },
+  const handleDropdownContentMouseEnter = () => {
+    // Clear the timeout if the mouse enters the dropdown content
+    if (timeoutId) clearTimeout(timeoutId);
+  };
 
-  {
-    img:"/BonesImg5.webp",
-    title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2"
-  },
-  {
-    img:"/BonesImg6.webp",
-    title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67"
-  },
-  {
-    img:"/BonesImg7.png",
-    title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5"
-  },
-  {
-    img:"BonesImg8.webp",
-    title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5"
-  },
+  const handleDropdownContentMouseLeave = () => {
+    // Hide the dropdown after delay
+    const id = setTimeout(() => {
+      setDropdown(null);
+    }, 300); // Adjust the delay as needed
+    setTimeoutId(id);
+  };
 
-  {
-    img:"/BonesImg9.webp",
-    title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2"
-  },
-  {
-    img:"/BonesImg10.webp",
-    title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67"
-  },
-  {
-    img:"/BonesImg11.webp",
-    title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5"
-  },
-  {
-    img:"/BonesImg12.webp",
-    title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5"
-  },
-
-  {
-    img:"/BonesImg13.webp",
-    title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2"
-  },
-  {
-    img:"BonesImg14.webp",
-    title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67"
-  },
-  {
-    img:"BonesImg15.webp",
-    title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5"
-  },
-  {
-    img:"/BonesImg16.webp",
-    title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5"
-  }
-
-
-];
-
-
-const CardiacCare = () => {
   return (
     <>
+      <nav className="w-full bg-white py-5 px-10 flex flex-wrap gap-2 shadow-custom-light">
+        {/* Top Row */}
+        <section className="navsec w-full flex items-center justify-between mb-2">
+          <section className="logo flex items-center gap-2">
+            <div>
+              <img
+                src="/logo.png"
+                alt="Logo"
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="text-xl font-semibold font-sans">Healthwire</div>
+          </section>
+          <div className="searchsec w-600 flex items-center">
+            <div className="search h-12 flex items-center border-2 border-blue-300 rounded-lg overflow-hidden">
+              <div className="px-2 h-8 border-r border-blue-400 flex items-center justify-center gap-2 text-center">
+                <div className="location flex items-center justify-center text-blue-700">
+                  <FontAwesomeIcon icon={faLocationCrosshairs} className="size-4" />
+                </div>
+                <div className="drop flex items-center justify-center text-center">
+                  <select name="" id="" className="w-20 border-0 outline-none">
+                    <option value="">Select</option>
+                    <option value="">Islamabad</option>
+                    <option value="">Karachi</option>
+                    <option value="">Lahore</option>
+                    <option value="">Multan</option>
+                  </select>
+                </div>
+              </div>
+              <div className="inp px-4">
+                <input
+                  className="w-96 outline-none border-0 text-gray-600"
+                  placeholder="Search for medicines, lab tests, and doctors...."
+                  type="text"
+                />
+              </div>
+              <div className="flex items-center justify-center text-center">
+                <button
+                  className="searchbtn w-16 h-12 flex items-center text-center justify-center bg-blue-500 text-white border-none"
+                >
+                  <FontAwesomeIcon icon={faMagnifyingGlass} className="size-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="btnCart flex items-center justify-between gap-8">
+            <div className="cart text-blue-900">
+              <FontAwesomeIcon icon={faCartShopping} className="size-6" />
+            </div>
+            <div className="btn-sign w-36 h-9 border-2 rounded-lg border-blue-900 flex items-center justify-center gap-2 size-4 text-blue-900 font-sans font-semibold">
+              <button className="login">Login</button>
+              /
+              <button className="signup">Signup</button>
+            </div>
+          </div>
+        </section>
 
-    
-    <NavForPhar/>
-    <h1 className='text-2xl font-bold mt-10'>Medications</h1>
-    <div className=" pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
+        {/* Bottom Row with Navigation Links */}
+        <section className="navsec nav-links w-full py-2 flex justify-between gap-8">
+          <div className="flex justify-center gap-8">
+            <Link href="/" className="text-blue-900 hover:underline">
+              Home
+            </Link>
+            <div
+              className="relative"
+              onMouseEnter={() => handleDropdownOpen('medications')}
+              onMouseLeave={handleDropdownClose}
+            >
+              <a className="text-blue-900 hover:underline cursor-pointer">
+                Medications
+              </a>
+              {dropdown === 'medications' && (
+                <div
+                  className="absolute bg-white shadow-md border border-gray-300 rounded-md mt-2 z-10"
+                  onMouseEnter={handleDropdownContentMouseEnter}
+                  onMouseLeave={handleDropdownContentMouseLeave}
+                >
+                  <Link href="/Bone-And-Joint-Pain" className="block px-6 py-2 hover:bg-gray-100">Bone And Joint Pain</Link>
+                  <Link href="/Cardiac-care" className="block px-6 py-2 hover:bg-gray-100">Cardiac Care</Link>
+                </div>
+              )}
+            </div>
+            <div
+              className="relative"
+              onMouseEnter={() => handleDropdownOpen('wellness')}
+              onMouseLeave={handleDropdownClose}
+            >
+              <a className="text-blue-900 hover:underline cursor-pointer">
+                Wellness And Beauty
+              </a>
+              {dropdown === 'wellness' && (
+                <div
+                  className="absolute bg-white shadow-md border border-gray-300 rounded-md mt-2 z-10"
+                  onMouseEnter={handleDropdownContentMouseEnter}
+                  onMouseLeave={handleDropdownContentMouseLeave}
+                >
+                  <Link href="/wellness/beauty1" className="block px-4 py-2 hover:bg-gray-100">Beauty 1</Link>
+                  <Link href="/wellness/beauty2" className="block px-4 py-2 hover:bg-gray-100">Beauty 2</Link>
+                </div>
+              )}
+            </div>
+            <div
+              className="relative"
+              onMouseEnter={() => handleDropdownOpen('devices')}
+              onMouseLeave={handleDropdownClose}
+            >
+              <a className="text-blue-900 hover:underline cursor-pointer">
+                Devices And Injectables
+              </a>
+              {dropdown === 'devices' && (
+                <div
+                  className="absolute bg-white shadow-md border border-gray-300 rounded-md mt-2 z-10"
+                  onMouseEnter={handleDropdownContentMouseEnter}
+                  onMouseLeave={handleDropdownContentMouseLeave}
+                >
+                  <Link href="/devices/device1" className="block px-4 py-2 hover:bg-gray-100">Device 1</Link>
+                  <Link href="/devices/device2" className="block px-4 py-2 hover:bg-gray-100">Device 2</Link>
+                </div>
+              )}
+            </div>
+            <a
+              href="#"
+              onMouseEnter={() => handleDropdownOpen('categories')}
+              onMouseLeave={handleDropdownClose}
+              className="text-blue-900 hover:underline cursor-pointer"
+            >
+              View All Categories
+            </a>
+          </div>
+          <div className="pharm text-blue-900 font-semibold font-sans border-b border-blue-900">
+            <a href="/">Pharmacy Franchise</a>
+          </div>
+        </section>
+      </nav>
+      <Card1/>
+    </>
+  );
+};
 
-    {Cardsdata.map((card, index) => (
-      <div key={index} className="p-4 shadow-sm">
-
-      <div className=' navsec bg-slate-100 w-56 h-28 py-2 pl-4 pt-4' >  <img className='w-48 h-20 bg-slate-300' src={card.img} alt={card.title} /></div>
-        <p className="PARA pt-4">{card.title}</p>
-        <p className="text-xs pt-2">${card.price}</p>
-        <button className='btn w-20 h-7  mt-5  text-center text-xs'>Add To Cart</button>
-      </div>
-    ))}
-  </div>
-  <Footer/>
-  </>
-  )
-}
-
-export default CardiacCare
+export default page;
