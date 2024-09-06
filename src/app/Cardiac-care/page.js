@@ -97,6 +97,8 @@ const CardiacCare = () => {
   return (
     <>
     <NavForPhar/>
+    <section className='containers mt-20'>
+      <div className="w-full navsec">
     <h1 className='text-2xl font-bold'>Medications</h1>
     <div className=" w-full justify-items-center   pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
     {Cardsdata.map((card, index) => (
@@ -109,6 +111,8 @@ const CardiacCare = () => {
       </div>
     ))}
   </div>
+  </div>
+  </section>
   <Footer/>
   </>
   )
