@@ -25,7 +25,9 @@
   align-items: center;
   justify-content: center;
 }
-
+.border{
+  border: 1px solid silver;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
