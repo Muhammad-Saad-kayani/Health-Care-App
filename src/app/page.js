@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import Slider from "./Components/slider";
 import LandingCard from "./Components/landingPage";
 import MedicineCard from "./Components/medicineCard";
+import Service from "./Components/service";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     <Slider/>
     <LandingCard/>
     <MedicineCard/>
+    <Service/>
     <Footer/>
     </>
   );
