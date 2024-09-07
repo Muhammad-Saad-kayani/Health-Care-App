@@ -8,9 +8,9 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
 function Footer() {
   return (
-    <footer className="w-full  bg-blue py-5">
+    <footer className="w-full  bg-navblue py-5">
       <section className="navsec w-full flex gap-12 mb-2 py-8">
-        <div className="flex py-2 flex-wrap w-72">
+        <div className="flex py-2 flex-col w-72 h-[220px]">
           <div className="img rounded">
             <img
               className="rounded-lg"
@@ -23,8 +23,8 @@ function Footer() {
           <div className="title text-white font-sans text-xl font-bold  w-full">
             Aapki Sehat, Hamari Tarjeeh
           </div>
-          <div className="get w-full text-white font-sans text-lg font-semibold">Get The Healthwire App</div>
-          <div className="play w-full">
+          <div className="get w-full text-white font-sans text-lg font-semibold mt-6">Get The Healthwire App</div>
+          <div className="play w-full mt-2">
             <a href="/"><img
              src="/playstore.png" 
              alt="" 
@@ -74,7 +74,7 @@ function Footer() {
         </div>
       </section>
 
-      <section className="foot navsec w-full h-32 border-t border-blue-200 flex items-center justify-between gap-2 text-blue-50  font-sans">
+      <section className="foot navsec w-full h-24 border-t border-gray-600  flex items-center justify-between gap-2 text-blue-50  font-sans">
         <div className="">
           <a href="">© Healthwire 2024 Terms Privacy</a>
         </div>

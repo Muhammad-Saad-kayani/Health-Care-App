@@ -18,7 +18,7 @@ export default function Slider() {
   }, []);
 
   return (
-    <section className='slider bg-white w-full flex items-center justify-center p-4 py-40'>
+    <section className='slider bg-white w-full flex items-center justify-center p-4 mt-20 py-20'>
     <div className="navsec relative w-full h-80 rounded-xl overflow-hidden">
       {images.map((image, index) => (
         <div
