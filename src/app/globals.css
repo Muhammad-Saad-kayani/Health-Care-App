@@ -15,7 +15,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+body{
+  background-color: white;
+}
 .icon-size {
   font-size: 1rem !important;
 }
@@ -28,6 +30,26 @@
 .border{
   border: 1px solid silver;
 }
+.bor{
+  border: 40px solid white;
+}
+
+.img{
+  
+  width: 100%;
+  height: 350px;
+  
+  background-color: transparent;
+}
+
+.careerimg{
+  width: 100%;
+  position: fixed;
+  top: 200;
+  z-index: 1;
+
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

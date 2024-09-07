@@ -56,7 +56,7 @@ const NavBar = () => {
               </div>
               <div className="flex items-center justify-center text-center">
                 <button
-                  className="searchbtn w-16 h-12 flex items-center text-center justify-center bg-[#1D4ED8] text-white border-none"
+                  className="searchbtn w-16 h-12 flex items-center text-center justify-center bg-[#3f7fe0] text-white border-none"
                 >
                   <FontAwesomeIcon icon={faMagnifyingGlass} className="size-4" />
                 </button>
