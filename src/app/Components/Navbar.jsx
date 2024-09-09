@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="w-full bg-white py-5 px-10 flex flex-wrap gap-2 shadow-custom-light">
+      <nav className="w-full bg-white py-5 px-10 flex flex-wrap gap-2 shadow-custom-light fixed top-0 z-50">
         {/* Top Row */}
         <section className="navsec w-full flex items-center justify-between mb-2">
           <section className="logo flex items-center gap-2">
@@ -56,7 +56,7 @@ const NavBar = () => {
               </div>
               <div className="flex items-center justify-center text-center">
                 <button
-                  className="searchbtn w-16 h-12 flex items-center text-center justify-center bg-blue-500 text-white border-none"
+                  className="searchbtn w-16 h-12 flex items-center text-center justify-center bg-[#1D4ED8] text-white border-none"
                 >
                   <FontAwesomeIcon icon={faMagnifyingGlass} className="size-4" />
                 </button>
