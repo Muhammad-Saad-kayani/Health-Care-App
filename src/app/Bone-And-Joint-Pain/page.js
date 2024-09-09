@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import NavBar from '../Components/NavForPhar';
 import NavForPhar from '../Components/NavForPhar';
 import Footer from '../Components/Footer';
 
