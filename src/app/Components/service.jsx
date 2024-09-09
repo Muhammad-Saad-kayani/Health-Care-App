@@ -3,7 +3,7 @@ import React from 'react'
 function Service() {
   return (
   <>
-  <section className="containers mt-20">
+  <section className="containers bg-white py-20">
     <div className="navsec w-full flex justify-between flex-wrap">
         <div className="w-[49%] flex flex-col">
             <div className="w-[60%] text-[#3d6093] font-san text-sm font-semibold mt-0">HOW WE WORK</div>

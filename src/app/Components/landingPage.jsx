@@ -5,7 +5,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function LandingCard() {
   return (
     <>
-      <section className="w-full flex items-center justify-center mt-10 p-4">
+      <section className="w-full flex items-center justify-center bg-white ">
         <div className="landingcard navsec w-full flex items-center justify-between flex-wrap ">
           <div className="w-full text-2xl font-semibold">How Can We Help?</div>
           <div className="card w-full flex items-center justify-between flex-wrap mt-10">
@@ -55,7 +55,7 @@ function LandingCard() {
         </div>
       </section>
 
-      <section className="containers mt-10">
+      <section className="containers bg-white py-20">
         <div className="navsec w-full flex justify-between items-center flex-wrap  ">
           <div className="w-full text-[#3d6093]">Mission Statement</div>
           <div className="w-full flex  justify-between gap-5 mt-3">

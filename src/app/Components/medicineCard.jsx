@@ -5,7 +5,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 function MedicineCard() {
   return (
     <>
-      <section className="containers mt-20">
+      <section className="containers bg-white py-0">
         <div className="navsec w-full flex items-center justify-center flex-wrap gap-4">
           <div className="w-full text-center text-[#3d6093] font-sans font-semibold">
             PHARMACY
