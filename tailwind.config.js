@@ -23,7 +23,7 @@ module.exports = {
         '16':'1rem'
       },
       backgroundColor:{
-        'blue':'#183155',
+        'navblue':'#183155',
         'gre':'#ebfaf8',
         'ble':'#edf3fc',
         'blehover':'#d1def7',
