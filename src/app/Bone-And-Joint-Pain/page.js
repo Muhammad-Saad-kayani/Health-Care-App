@@ -92,7 +92,7 @@ const BonesCare = () => {
     <>
       <NavForPhar />
       <h1 className="text-2xl font-bold mt-10">Medications</h1>
-      <div className=" pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className=" pt-8 grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
         <section className="containers mt-20">
           <div className="w-full navsec">
             <h1 className="text-2xl font-bold">Medications</h1>
