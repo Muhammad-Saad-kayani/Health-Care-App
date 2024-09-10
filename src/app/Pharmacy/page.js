@@ -5,6 +5,7 @@ import Footer from '../Components/Footer';
 import Card1 from '../Components/Card1';
 import Slider from '../Components/slider';
 import NavForPhar from '../Components/NavForPhar';
+import ExploreCategory from '../Components/ExploreCategory';
 
 
 const NavBar = () => {
@@ -13,6 +14,7 @@ const NavBar = () => {
     <>
       <NavForPhar/>
       <Slider/>
+      <ExploreCategory/>
       <Card1/>
       <Footer/>
     </>

@@ -27,6 +27,8 @@ export const Cardsdata = [
 const Card1 = () => {
   return (
     <>
+    <h2 className="containers font-bold text-2xl mt-8">Top Selling products</h2>
+    <p className="containers mt-2">Get your necessities at  <span className="text-violet-400 px-1">  upto 10%  </span> discount on all items.</p>
     <section className='w-full flex justify-center'>
     <div className="navsec w-full justify-items-center pt-8 grid gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
     {Cardsdata.map((card, index) => (
