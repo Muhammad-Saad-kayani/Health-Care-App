@@ -143,7 +143,7 @@ const NavForPhar = () => {
             )}
           </div>
           <a
-            href="#"
+            href="/viewCategories"
             onMouseEnter={() => handleDropdownOpen('categories')}
             onMouseLeave={handleDropdownClose}
             className="text-blue-900 hover:underline cursor-pointer"
