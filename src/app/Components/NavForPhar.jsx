@@ -152,7 +152,7 @@ const NavForPhar = () => {
           </a>
         </div>
         <div className="pharm text-blue-900 font-semibold font-sans border-b border-blue-900">
-          <a href="/">Pharmacy Franchise</a>
+          <a href="/Franchises">Pharmacy Franchise</a>
         </div>
       </section>
     </nav>
