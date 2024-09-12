@@ -50,6 +50,20 @@ body{
 
 }
 
+/* globals.css */
+.btn-border {
+  border: 1px solid #000; /* Black border, change the color or size as needed */
+  border-radius: 5px;     /* Optional: adds rounded corners */
+  padding: 5px 10px;      /* Optional: adds padding */
+  transition: all 0.3s ease-in-out; /* Optional: smooth transition on hover */
+}
+
+.btn-border:hover {
+  background-color: #f0f0f0; /* Optional: change background color on hover */
+  border-color: #ff0000;      /* Optional: changes border color to red on hover */
+}
+
+
 
 @layer utilities {
   .text-balance {

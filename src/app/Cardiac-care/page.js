@@ -108,7 +108,7 @@ const CardiacCare = () => {
                   </div>
                   <p className="PARA pt-4">{card.title}</p>
                   <p className="text-xs pt-2">{card.price}</p>
-                  <button className="btn w-20 h-7 mt-5 text-center text-xs">
+                  <button className="btn btn-border w-28 h-9 mt-5 text-center text-xs">
                     Add To Cart
                   </button>
                 </div>

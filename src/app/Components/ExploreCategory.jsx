@@ -41,11 +41,10 @@ const ExploreCategory = () => {
   return (
     <>
       <h1 className="containers text-2xl font-bold mt-10 text-center">Explore by categories</h1>
-      {/* Reduced gap-y-2 to minimize vertical space between cards */}
       <div className="pt-8 grid  gap-y-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mx-auto max-w-7xl px-4">
         {Cardsdata.map((card, index) => (
           <div key={index} className="shadow-sm w-60 flex items-center mx-auto">
-            <div className="w-24 h-24 flex justify-center">
+            <div className="w-24 h-24 cursor-pointer flex justify-center">
               <img
                 className="w-24 h-24 object-contain"
                 src={card.img}
@@ -61,7 +60,7 @@ const ExploreCategory = () => {
       </div>
       <div className="flex justify-end mt-6 pr-20">
         <p className="text-right text-sm font-semibold">
-          <a href="" className="">  
+          <a href="/viewCategories" className="">  
           View All Categories
             <FontAwesomeIcon icon={faArrowRight} className="text-sm ml-2" />
           </a>

@@ -6,6 +6,8 @@ import Card1 from '../Components/Card1';
 import Slider from '../Components/slider';
 import NavForPhar from '../Components/NavForPhar';
 import ExploreCategory from '../Components/ExploreCategory';
+import TopArticles from '../Components/TopArticles';
+import ExploreMedicine from '../Components/ExploreMedicine';
 
 
 const NavBar = () => {
@@ -16,6 +18,8 @@ const NavBar = () => {
       <Slider/>
       <ExploreCategory/>
       <Card1/>
+      <TopArticles/>
+      <ExploreMedicine/>
       <Footer/>
     </>
   );
