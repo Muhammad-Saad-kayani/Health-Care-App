@@ -1,4 +1,5 @@
-import React from 'react'
+import {React} from 'react'
+import Link from 'next/link'
 
 function Service() {
   return (
@@ -9,10 +10,10 @@ function Service() {
             <div className="w-[60%] text-[#3d6093] font-san text-sm font-semibold mt-0">HOW WE WORK</div>
             <div className="w-[60%] font-san text-2xl font-bold mt-3">Serving All Your Healthcare Needs At One Place!</div>
             <div className="w-full flex items-center gap-2 mt-5">
-                <div className="px-3 py-2 text-center text-sm text-white rounded-2xl  bg-[#183155] cursor-pointer">Pharmacy</div>
+              <Link href="/Pharmacy"> <div className="px-3 py-2 text-center text-sm text-white rounded-2xl  bg-[#183155] cursor-pointer">Pharmacy</div> </Link>
                 <div className="px-3 py-2 text-center text-sm text-gray-500 rounded-2xl border border-gray-400 bg-white cursor-pointer">Lab Tests</div>
                 <div className="px-3 py-2 text-center text-sm text-gray-500 rounded-2xl border border-gray-400 bg-white cursor-pointer">Doctor Appointments</div>
-
+                
             </div>
             <div className="w-[60%] font-san text-lg font-semibold mt-6">Order in three easy steps!</div>
             <div className="w-full ">

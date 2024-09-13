@@ -9,7 +9,7 @@ function LandingCard() {
         <div className="landingcard navsec w-full flex items-center justify-between flex-wrap ">
           <div className="w-full text-2xl font-semibold">How Can We Help?</div>
           <div className="card w-full flex items-center justify-between flex-wrap mt-10">
-            <a href="/" className="w-[49%] ">
+            <a href="/Pharmacy" className="w-[49%] ">
               <div className="w-full h-64 hover:bg-grehover bg-gre flex justify-between gap-4 rounded-lg">
                 <div className="content p-6">
                   <h1 className="text-darkgreen font-bold font-sans">

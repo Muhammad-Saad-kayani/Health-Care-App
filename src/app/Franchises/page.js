@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import NavForPhar from '../Components/NavForPhar'
+import Footer from '../Components/Footer'
 
 const page = () => {
   return (
@@ -37,7 +38,7 @@ const page = () => {
          <p className='mt-5  text-gray-600 text-[18px]'>Category & Licensing Consultancy</p>
          <p className='mt-5  text-gray-600 text-[18px]'>Location Consultancy</p>
          <p className='mt-5  text-gray-600 text-[18px]'>Staff Training & Development</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Initial Stock Fulfilment</p>
+         <p className='mt-5  text-gray-600 text-[18px] mb-5'>Initial Stock Fulfilment</p>
       </div>
 
       <div className=' secText3.2 block ml-28 mt-30 w-[940px] '>
@@ -55,6 +56,7 @@ const page = () => {
       </div>
       
     </div>
+    <Footer/>
     </>
   )
 }
