@@ -1,7 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
 import NavForPhar from '../Components/NavForPhar'
-import Footer from '../Components/Footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+
 
 const page = () => {
   return (
@@ -30,33 +32,50 @@ const page = () => {
 
         <div className=' flex '>
           <div className='secText3.1 block  mt-30 w-[940px]'>
-         <p className='mt-8  text-gray-600 text-[18px]'>Access & Target online customers</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Visual Merchandising</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Training & Operation Management</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Inventory management</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Partnership with labs/pharmacies</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Category & Licensing Consultancy</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Location Consultancy</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Staff Training & Development</p>
-         <p className='mt-5  text-gray-600 text-[18px] mb-5'>Initial Stock Fulfilment</p>
+         <p  className='mt-8  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/> Access & Target online customers</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/> Visual Merchandising</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}} />Training & Operation Management</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}} /> Inventory management</p>
+         <p className='mt-5  text-gray-600 text-[18px]'> <FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Partnership with labs/pharmacies</p>
+         <p className='mt-5  text-gray-600 text-[18px]'> <FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Category & Licensing Consultancy</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Location Consultancy</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Staff Training & Development</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Initial Stock Fulfilment</p>
       </div>
 
       <div className=' secText3.2 block ml-28 mt-30 w-[940px] '>
-         <p className='mt-8  text-gray-600 text-[18px]'>Social media marketing & branding activities</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Constant Software support</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Constant Software support </p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Retail Management</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Free on spot doctor video consultation</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Free on spot doctor video consultation</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>H-Cloud® Software: FREE</p>
-         <p className='mt-5  text-gray-600 text-[18px]'>Branding & Visual Merchandising: FREE</p>
+         <p className='mt-8  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Social media marketing & branding activities</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Constant Software support</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Constant Software support </p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Retail Management</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Free on spot doctor video consultation</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Free on spot doctor video consultation</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>H-Cloud® Software: FREE</p>
+         <p className='mt-5  text-gray-600 text-[18px]'><FontAwesomeIcon icon={faCheck} style={{color: "green", marginRight:15}}/>Branding & Visual Merchandising: FREE</p>
 
       </div>
       </div>
       </div>
       
+      <div className='imgHead ml-28 mt-10'>
+      <h1 className='font-extrabold text-2xl'>Some Glimpse of Healthwire pharmacy
+      </h1></div>
+      <div className='imgsec flex ml-28 gap-6 mt-8 '>
+       
+        <img className='w-[50%] h-[300px]   rounded-lg ' src='franchiseImg1.webp' alt=''/>
+        <img className='w-[30%] h-[300px]   rounded-lg' src='franchiseImg2.webp' alt=''/>
+
+      </div>
+
+      <div className='imgsec2 flex ml-28 gap-6 mt-8 '>
+       
+       <img className='w-[30%] h-[300px]   rounded-lg ' src='franchiseImg3.webp' alt=''/>
+       <img className='w-[50%] h-[300px]   rounded-lg' src='franchiseImg4.webp' alt=''/>
+
+     </div>
+      
     </div>
-    <Footer/>
+    
     </>
   )
 }
