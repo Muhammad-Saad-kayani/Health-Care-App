@@ -1,8 +1,7 @@
-
-import Image from 'next/image';
-import React from 'react';
-import NavForPhar from '../Components/NavForPhar';
-import Footer from '../Components/Footer';
+import Image from "next/image";
+import React from "react";
+import NavForPhar from "../Components/NavForPhar";
+import Footer from "../Components/Footer";
 
 export const Cardsdata = [
   {
@@ -93,9 +92,33 @@ const BonesCare = () => {
       <NavForPhar />
       <h1 className="text-2xl font-bold mt-10">Medications</h1>
       <div className=" pt-8 grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
-        <section className="containers mt-20">
+        <section className="containers mt-14">
           <div className="w-full navsec">
-            <h1 className="text-2xl font-bold">Medications</h1>
+            <h1 className="font-extrabold text-xl mb-5">Wellness And Beauty</h1>
+            <a
+              href="/Bone-And-Joint-Pain"
+              className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
+            >
+              Supplements
+            </a>
+            <a
+              href="/Hair-&-Nails"
+              className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
+            >
+              Hair And Nails Care
+            </a>
+            <a
+              href="/Cardiac-care"
+              className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
+            >
+              Skin Care
+            </a>
+            <a
+              href="/Oral-Hygiene"
+              className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
+            >
+              Oral Hygiene
+            </a>
             <div className="w-full justify-items-center pt-8 grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
               {Cardsdata.map((card, index) => (
                 <div key={index} className="p-4 shadow-sm">
