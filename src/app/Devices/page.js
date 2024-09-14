@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import NavForPhar from "../Components/NavForPhar";
 import Footer from "../Components/Footer";
-import BreadCrumb from "../Components/BreadCrum";
+import BreadCrumb from "../Components/BreadCrumb";
 
 
 export const Cardsdata = [

@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image';
 import NavForPhar from '../Components/NavForPhar';
 import Footer from '../Components/Footer';
-import BreadCrumb from '../Components/BreadCrum';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
 
 export const Cardsdata = [
   {

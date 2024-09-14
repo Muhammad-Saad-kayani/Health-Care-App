@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
 
 const OurPresence = () => {
   return (
@@ -15,7 +14,7 @@ const OurPresence = () => {
       </p>
 
       </div>
-      <div className='images flex justify-center gap-7 mt-7' >
+      <div className='images flex justify-center gap-7 mt-6' >
         <img className='w-60 ' src=' Multan-frachises.webp'/>
         <img className='w-60' src=' Lahore-frachises.webp'/>
         <img className='w-60' src=' Gujrat-frachises.webp'/>
@@ -24,7 +23,7 @@ const OurPresence = () => {
 
       </div>
 
-      <div className='images flex justify-center gap-7 mt-7' >
+      <div className='images flex justify-center gap-7 mt-6' >
         <img className='w-60 ' src=' Layyah-frachises.webp'/>
         <img className='w-60' src=' Lodhran-frachises.webp'/>
         <img className='w-60' src=' DI Khan-frachises.webp'/>
@@ -33,7 +32,7 @@ const OurPresence = () => {
 
       </div>
 
-      <div className=' mb-10 images flex justify-center gap-7 mt-7' >
+      <div className=' mb-10 images flex justify-center gap-7 mt-6' >
         <img className='w-60 ' src=' Bahawalpur-frachises.webp'/>
         <img className='w-60' src=' Nankana sahib-frachises.webp'/>
         <img className='w-60' src=' Sarrgodha-frachises.webp'/>
