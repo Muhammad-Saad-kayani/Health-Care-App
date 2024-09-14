@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image';
 import NavForPhar from '../Components/NavForPhar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
