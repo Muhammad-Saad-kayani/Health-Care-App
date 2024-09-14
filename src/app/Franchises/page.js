@@ -3,7 +3,8 @@ import Image from 'next/image';
 import NavForPhar from '../Components/NavForPhar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-
+import Footer from '../Components/Footer';
+import Ourpresence from '../Components/ourpresence';
 
 const page = () => {
   return (
@@ -67,15 +68,17 @@ const page = () => {
 
       </div>
 
-      <div className='imgsec2 flex ml-28 gap-6 mt-8 '>
+      <div className='imgsec2 flex ml-28 gap-6 mt-8 mb-20'>
        
        <img className='w-[30%] h-[300px]   rounded-lg ' src='franchiseImg3.webp' alt=''/>
-       <img className='w-[50%] h-[300px]   rounded-lg' src='franchiseImg4.webp' alt=''/>
+       <img className='w-[50%] h-[300px]   rounded-lg ' src='franchiseImg4.webp' alt=''/>
 
      </div>
       
     </div>
-    
+    <Ourpresence/>
+    <Footer/>
+
     </>
   )
 }
