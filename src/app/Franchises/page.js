@@ -7,6 +7,8 @@ import OurPresence from '../Components/OurPresence';
 import Footer from '../Components/Footer';
 
 
+import Footer from '../Components/Footer';
+import Ourpresence from '../Components/ourpresence';
 const page = () => {
   return (
     <>
@@ -69,10 +71,10 @@ const page = () => {
 
       </div>
 
-      <div className='imgsec2 flex ml-28 gap-6 mt-8 '>
+      <div className='imgsec2 flex ml-28 gap-6 mt-8 mb-20'>
        
        <img className='w-[30%] h-[300px]   rounded-lg ' src='franchiseImg3.webp' alt=''/>
-       <img className='w-[50%] h-[300px]   rounded-lg' src='franchiseImg4.webp' alt=''/>
+       <img className='w-[50%] h-[300px]   rounded-lg ' src='franchiseImg4.webp' alt=''/>
 
      </div>
       
@@ -80,6 +82,10 @@ const page = () => {
     <OurPresence/>
     <Footer/>
     
+
+    <Ourpresence/>
+    <Footer/>
+
     </>
   )
 }

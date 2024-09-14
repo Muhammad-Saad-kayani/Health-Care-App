@@ -2,7 +2,10 @@ import Image from "next/image";
 import React from "react";
 import NavForPhar from "../Components/NavForPhar";
 import Footer from "../Components/Footer";
+<<<<<<< HEAD
+=======
 import BreadCrumb from "../Components/BreadCrum";
+>>>>>>> 555b6f7be064bf48a30495731d9746c2be801fc7
 
 export const Cardsdata = [
   {
@@ -96,7 +99,10 @@ const BonesCare = () => {
         <section className="containers mt-20">
           <div className="w-full navsec">
             <h1 className="text-2xl font-bold mb-5">Wellness And Beauty</h1>
+<<<<<<< HEAD
+=======
             <BreadCrumb/>
+>>>>>>> 555b6f7be064bf48a30495731d9746c2be801fc7
             <a
               href="/Bone-And-Joint-Pain"
               className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
