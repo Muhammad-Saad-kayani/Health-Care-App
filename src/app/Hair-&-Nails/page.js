@@ -1,6 +1,10 @@
 import React from 'react'
 import NavForPhar from '../Components/NavForPhar'
 import Footer from '../Components/Footer';
+<<<<<<< HEAD
+=======
+import BreadCrumb from '../Components/BreadCrum';
+>>>>>>> 555b6f7be064bf48a30495731d9746c2be801fc7
 
 export const Cardsdata = [
   {
@@ -69,7 +73,12 @@ const page = () => {
   return (
     <>
       <NavForPhar/>
+<<<<<<< HEAD
       <p className="font-extrabold text-xl mt-40 ml-10">Wellness And Beauty</p>
+=======
+      <p className="font-extrabold text-xl mt-40 ml-10 mb-3">Wellness And Beauty</p>
+      <BreadCrumb/>
+>>>>>>> 555b6f7be064bf48a30495731d9746c2be801fc7
       <div className="mt-6 ml-10">
         <a href="/Bone-And-Joint-Pain" className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2">Supplements</a>
         <a href="/Hair-&-Nails" className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2">Hair And Nails Care</a>
