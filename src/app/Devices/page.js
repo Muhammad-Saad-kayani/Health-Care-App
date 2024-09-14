@@ -2,10 +2,8 @@ import Image from "next/image";
 import React from "react";
 import NavForPhar from "../Components/NavForPhar";
 import Footer from "../Components/Footer";
-<<<<<<< HEAD
-=======
 import BreadCrumb from "../Components/BreadCrum";
->>>>>>> 555b6f7be064bf48a30495731d9746c2be801fc7
+
 
 export const Cardsdata = [
   {
@@ -95,14 +93,12 @@ const BonesCare = () => {
     <>
       <NavForPhar />
       <h1 className="text-2xl font-bold mt-10">Medications</h1>
+      <BreadCrumb/>
       <div className=" pt-8 grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
         <section className="containers mt-20">
           <div className="w-full navsec">
             <h1 className="text-2xl font-bold mb-5">Wellness And Beauty</h1>
-<<<<<<< HEAD
-=======
             <BreadCrumb/>
->>>>>>> 555b6f7be064bf48a30495731d9746c2be801fc7
             <a
               href="/Bone-And-Joint-Pain"
               className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
