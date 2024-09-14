@@ -3,12 +3,10 @@ import Image from 'next/image';
 import NavForPhar from '../Components/NavForPhar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import OurPresence from '../Components/OurPresence';
 import Footer from '../Components/Footer';
+import Ourpresence from '../Components/OurPresence';
 
 
-import Footer from '../Components/Footer';
-import Ourpresence from '../Components/ourpresence';
 const page = () => {
   return (
     <>
@@ -79,8 +77,7 @@ const page = () => {
      </div>
       
     </div>
-    <OurPresence/>
-    <Footer/>
+    
     
 
     <Ourpresence/>
