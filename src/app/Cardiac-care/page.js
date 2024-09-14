@@ -97,10 +97,8 @@ const CardiacCare = () => {
         <section className="containers mt-14">
           <div className="w-full navsec">
           <p className="font-extrabold text-xl mb-5 ml-4">Wellness And Beauty</p>
-<<<<<<< HEAD
-=======
+
           <BreadCrumb/>
->>>>>>> 555b6f7be064bf48a30495731d9746c2be801fc7
             <a href="/Bone-And-Joint-Pain" className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2">Supplements</a>
         <a href="/Hair-&-Nails" className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2">Hair And Nails Care</a>
         <a href="/Cardiac-care" className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2">Skin Care</a>
