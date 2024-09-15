@@ -15,7 +15,7 @@ const Ourpresence = () => {
       </p>
 
       </div>
-      <div className='images flex justify-center gap-7 mt-7' >
+      <div className='images  ml-24 mt-7 w-[85%] justify-items-center pt-8 grid gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4' >
         <img className='w-60 ' src=' Multan-franchises.webp'/>
         <img className='w-60' src=' Lahore-franchises.webp'/>
         <img className='w-60' src=' Gujrat-franchises.webp'/>
@@ -23,17 +23,17 @@ const Ourpresence = () => {
 
 
       </div>
-
-      <div className='images flex justify-center gap-7 mt-7' >
+                  
+       <div className='images ml-24  mt-7 w-[85%] justify-items-center pt-8 grid gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4' >
         <img className='w-60 ' src=' Layyah-franchises.webp'/>
         <img className='w-60' src=' Lodhran-franchises.webp'/>
         <img className='w-60' src=' DI Khan-franchises.webp'/>
         <img className='w-60' src=' Dunyapur-franchises.webp'/>
 
 
-      </div>
+      </div> 
 
-      <div className=' mb-10 images flex justify-center gap-7 mt-7' >
+      <div className=' mb-10 images ml-24  mt-7 w-[85%] justify-items-center pt-8 grid gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4' >
         <img className='w-60 ' src=' Bahawalpur-franchises.webp'/>
         <img className='w-60' src=' Nankana sahib-franchises.webp'/>
         <img className='w-60' src=' Sarrgodha-franchises.webp'/>
