@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-
+import Image from 'next/image';
 
 const Ourpresence = () => {
   return (
@@ -25,8 +25,8 @@ const Ourpresence = () => {
       </div>
                   
        <div className='images ml-24  mt-7 w-[85%] justify-items-center pt-8 grid gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4' >
-        <img className='w-60 ' src=' Layyah-franchises.webp'/>
-        <img className='w-60' src=' Lodhran-franchises.webp'/>
+        <img className='w-60 ' src='Layyah-frachises.webp'/>
+        <img className='w-60' src=' lodhran-frachises.webp'/>
         <img className='w-60' src=' DI Khan-franchises.webp'/>
         <img className='w-60' src=' Dunyapur-franchises.webp'/>
 
