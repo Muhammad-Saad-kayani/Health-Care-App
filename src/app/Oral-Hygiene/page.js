@@ -1,8 +1,8 @@
 import React from 'react'
 import NavForPhar from '../Components/NavForPhar'
 import Footer from '../Components/Footer';
+import BreadCrumb from '../Components/BreadCrumb';
 
-import BreadCrumb from '../Components/BreadCrum';
 
 export const Cardsdata = [
   {
