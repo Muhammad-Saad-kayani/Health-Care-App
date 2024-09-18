@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image';
 import NavForPhar from '../Components/NavForPhar';
 import Footer from '../Components/Footer';
-import BreadCrumb from '../Components/BreadCrum';
+import BreadCrumb from '../Components/BreadCrumb';
 
 export const Cardsdata = [
   {
@@ -93,7 +93,6 @@ const CardiacCare = () => {
     <>
       <NavForPhar />
       <h1 className="text-2xl font-bold mt-10">Medications</h1>
-      <Breadcrumb/>
       <div className=" pt-8 grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
         <section className="containers mt-14">
           <div className="w-full navsec">

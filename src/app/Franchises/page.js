@@ -3,7 +3,6 @@ import NavForPhar from '../Components/NavForPhar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../Components/Footer';
-import Ourpresence from '../Components/OurPresence';
 import Franchiseform from '../Franchiseform/page';
 
 
