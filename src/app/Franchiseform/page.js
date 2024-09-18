@@ -3,7 +3,7 @@ import React from 'react'
 const Franchiseform = () => {
   return (
     <>
-    <div className='container w-[90%]  m-0, m-auto '>
+    <div className='container w-[90%]  m-0, m-auto mb-10'>
     <div className='m-0, m-auto border-2 border-gray-500 rounded-lg w-[85%]  pb-20 '>
      <div className='m-0, m-auto  w-[90%]  mt-10'>  
     <h1 className='font-extrabold text-2xl'>So what are you waiting for?</h1>
