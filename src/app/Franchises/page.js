@@ -82,7 +82,6 @@ const page = () => {
     
     
     <Franchiseform/>
-    <Ourpresence/>
     <Footer/>
 
     </>
