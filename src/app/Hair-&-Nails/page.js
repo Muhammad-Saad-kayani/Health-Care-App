@@ -1,8 +1,7 @@
 import React from 'react'
 import NavForPhar from '../Components/NavForPhar'
 import Footer from '../Components/Footer';
-import BreadCrumb from '../Components/BreadCrumb';
-
+import BreadCrumb from '../Components/BreadCrum';
 
 export const Cardsdata = [
   {
@@ -71,7 +70,6 @@ const page = () => {
   return (
     <>
       <NavForPhar/>
-
       <p className="font-extrabold text-xl mt-40 ml-10">Wellness And Beauty</p>
 
       <p className="font-extrabold text-xl mt-40 ml-10 mb-3">Wellness And Beauty</p>

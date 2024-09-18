@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import NavForPhar from "../Components/NavForPhar";
 import Footer from "../Components/Footer";
-import BreadCrumb from "../Components/BreadCrumb";
+import BreadCrumb from "../Components/BreadCrum";
 
 export const Cardsdata = [
   {
@@ -96,9 +96,7 @@ const BonesCare = () => {
         <section className="containers mt-20">
           <div className="w-full navsec">
             <h1 className="text-2xl font-bold mb-5">Wellness And Beauty</h1>
-
             <BreadCrumb/>
-
             <a
               href="/Bone-And-Joint-Pain"
               className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
