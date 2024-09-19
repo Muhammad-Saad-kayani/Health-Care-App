@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 import Link from 'next/link';
 
 const NavBar = () => {
@@ -115,6 +116,14 @@ const NavBar = () => {
             >
               Hospitals
             </a>
+            <Link
+              href="/Healthcare"
+              onMouseEnter={() => handleModalOpen('Healthcare')}
+              onMouseLeave={handleModalClose}
+              className="text-blue-900 hover:underline"
+            >
+              Health Blogs <FontAwesomeIcon icon={faArrowRight} className="size-4" />
+            </Link>
           </div>
           <div className="pharm text-blue-900 font-semibold font-sans border-b border-blue-900">
             <a href="/Franchises">Pharmacy Franchise</a>
