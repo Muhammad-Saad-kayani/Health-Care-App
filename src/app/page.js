@@ -17,9 +17,9 @@ export default function Home() {
       <LandingCard />
       <MedicineCard />
       <Service />
-      <Career/>
-      <Article/>
-      <Footer1/>
+      <Career />
+      <Article />
+      <Footer1 />
       <Footer />
     </>
   );

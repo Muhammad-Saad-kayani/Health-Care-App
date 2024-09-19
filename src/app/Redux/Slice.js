@@ -25,18 +25,19 @@ export const productSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {},
-    extraReducers : {
-        [productFetch.pending] : (state , action) =>{
+    extraReducers : (builder) => {
+        builder
+        .addCase(createAsyncThunk.pending, (state, action) => {
             state.status = "Pending"
-        },
-        [productFetch.fulfilled] : (state , action) =>{
+        })
+        .addCase(createAsyncThunk.fulfilled, (state, action) => {
             state.status = "Sucess"
             state.items = action.payload
-        },
-        [productFetch.rejected] : (state , action) =>{
+        })
+        .addCase(createAsyncThunk.rejected, (state, action) => {
             state.status = "rejected"
             state.error = action.payload       
-        }
+        })
     }
 })
 

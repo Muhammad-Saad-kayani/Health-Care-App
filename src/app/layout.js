@@ -2,6 +2,7 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css"
 import { store } from './Redux/Store';
 import { Provider } from 'react-redux';
 
