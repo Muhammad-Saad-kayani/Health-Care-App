@@ -4,7 +4,9 @@ import Footer from "../Components/Footer";
 import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'; 
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
 import Slider from "../Components/SliderForCarrers";
 
 
@@ -81,7 +83,7 @@ const TestimonialSlider = () => {
 
         {/* Right Arrow */}
         <div className="absolute right-0 z-10 cursor-pointer" onClick={nextSlide}>
-          <FontAwesomeIcon icon={faArrowRight} className="text-3xl text-gray-500" />
+          <FontAwesomeIcon icon={faCoffee} className="text-3xl text-gray-500" />
         </div>
       </div>
     </div>
