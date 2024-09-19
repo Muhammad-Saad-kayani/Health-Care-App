@@ -4,8 +4,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
-import NavLinks from './NavLinks';
 import Link from 'next/link';
 
 const NavBar = () => {
@@ -65,7 +63,9 @@ const NavBar = () => {
           </div>
           <div className="btnCart flex items-center justify-between gap-8">
             <div className="cart text-blue-900">
+              <Link href="/Cart">
               <FontAwesomeIcon icon={faCartShopping} className="size-6" />
+              </Link>
             </div>
             <div className="btn-sign w-36 h-9 border-2 rounded-lg border-blue-900 flex items-center justify-center gap-2 size-4 text-blue-900 font-sans font-semibold">
               <button className="login">Login</button>
