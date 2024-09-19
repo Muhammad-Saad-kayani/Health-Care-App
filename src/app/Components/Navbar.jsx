@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import NavLinks from './NavLinks';
 import Link from 'next/link';
