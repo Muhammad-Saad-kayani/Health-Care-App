@@ -1,8 +1,5 @@
-'use client'
-
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/CreateSlice";
+import { useCartHandler } from "./CartReusable";
 
 export const Cardsdata = [
   {
@@ -32,18 +29,7 @@ export const Cardsdata = [
 ];
 
 const Card1 = () => {
-  const dispatch = useDispatch();
-
-  const handleAddToCart = (card) => {
-    const itemToAdd = {
-      id: card.id,
-      name: card.title,
-      image: card.img,
-      price: card.price,
-    };
-    dispatch(addToCart(itemToAdd));
-    console.log(`Added to cart:`, itemToAdd);
-  };
+  const { handleAddToCart } = useCartHandler();
 
   return (
     <>

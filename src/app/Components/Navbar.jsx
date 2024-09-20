@@ -66,7 +66,7 @@ const NavBar = () => {
           <div className="btnCart flex items-center justify-between gap-8">
             <div className="cart text-blue-900">
               <Link href="/Cart">
-              <FontAwesomeIcon icon={faCartShopping} className="size-8 " />
+              <FontAwesomeIcon icon={faCartShopping} className="size-6 " />
               <span className="ml-2">{cartTotalQuantity}</span>
               </Link>
             </div>

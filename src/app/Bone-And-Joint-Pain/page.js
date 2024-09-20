@@ -1,94 +1,100 @@
+"use client"
+
+
 import Image from "next/image";
 import React from "react";
 import NavForPhar from "../Components/NavForPhar";
 import Footer from "../Components/Footer";
 import BreadCrumb from "../Components/BreadCrumb";
+import { useCartHandler } from "../Components/CartReusable";
 
 
 export const Cardsdata = [
   {
     img: "/sec1img1.png",
     title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2",
+    price: 43.2,
   },
   {
     img: "/sec1img2.png",
     title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67",
+    price: 102.6,
   },
   {
     img: "/sec1img3.webp",
     title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5",
+    price: 229,
   },
   {
     img: "/sec1img4.png",
     title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5",
+    price: 294,
   },
   {
     img: "/sec2img1.webp",
     title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2",
+    price: 43.2,
   },
   {
     img: "/sec2img2.webp",
     title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67",
+    price:  102.67,
   },
   {
     img: "/sec2img3.webp",
     title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5",
+    price: 229.5,
   },
   {
     img: "/sec2img4.png",
     title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5",
+    price: 294.5,
   },
   {
     img: "/sec3img1.webp",
     title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2",
+    price: 43.2,
   },
   {
     img: "/sec3img2.webp",
     title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67",
+    price: 102.67,
   },
   {
     img: "/sec3img3.webp",
     title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5",
+    price: 229.5,
   },
   {
     img: "/sec3img4.webp",
     title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5",
+    price: 294.5,
   },
   {
     img: "/sec4img1.webp",
     title: "Eziday (25mg) 20 Tablets",
-    price: "Rs. 43.2",
+    price:  43.2,
   },
   {
     img: "/sec4img2.png",
     title: "Carveda (6.25mg) 30 Tablets",
-    price: "Rs. 102.67",
+    price: 102.67,
   },
   {
     img: "/sec4img3.png",
     title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: "229.5",
+    price: 229.5,
   },
   {
     img: "/sec4img4.webp",
     title: "Zurig (40mg) 20 Tablets",
-    price: "Rs. 294.5",
+    price: 294.5,
   },
 ];
 
 const BonesCare = () => {
+  const { handleAddToCart } = useCartHandler();
+
   return (
     <>
       <NavForPhar />
@@ -96,8 +102,10 @@ const BonesCare = () => {
       <div className=" pt-8 grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-4">
         <section className="containers mt-14">
           <div className="w-full navsec">
-            <h1 className="font-extrabold text-xl mb-5 ml-4">Wellness And Beauty</h1>
-            <BreadCrumb/>
+            <h1 className="font-extrabold text-xl mb-5 ml-4">
+              Wellness And Beauty
+            </h1>
+            <BreadCrumb />
             <a
               href="/Bone-And-Joint-Pain"
               className="p-3 border rounded-full border-gray-400 inline-block mr-2 mb-2"
@@ -134,7 +142,10 @@ const BonesCare = () => {
                   </div>
                   <p className="PARA pt-4">{card.title}</p>
                   <p className="text-xs pt-2">{card.price}</p>
-                  <button className="btn btn-border w-28 h-9 mt-5 text-center text-xs">
+                  <button
+                    className="btn btn-border w-28 h-9 mt-5 text-center text-xs"
+                    onClick={() => handleAddToCart(card)}
+                  >
                     Add To Cart
                   </button>
                 </div>

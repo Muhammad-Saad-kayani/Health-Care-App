@@ -93,13 +93,14 @@ const Cart = () => {
               </div>
               <p>All the Taxes Counted</p>
               <button type="button">Checkout</button>
-              
+              <Link href="/Devices">
               <button
                 type="button"
                 className="continue-shopping border border-green-500 text-green-500 rounded-md px-4 py-2 mt-4 hover:bg-green-500 hover:text-white transition-all duration-300"
               >
                 Continue Shopping
               </button>
+              </Link>
             </div>
           </div>
         </div>
