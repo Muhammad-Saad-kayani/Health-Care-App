@@ -3,16 +3,17 @@
 
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-
+import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping , faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from "react-redux";
 import Link from 'next/link';
 
 const NavBar = () => {
+  const {cartTotalQuantity} = useSelector((state) => state.cart)
+
   const [modalType, setModalType] = useState(null);
 
   const handleModalOpen = (type) => setModalType(type);
   const handleModalClose = () => setModalType(null);
-
 
   return (
     <>
@@ -65,7 +66,8 @@ const NavBar = () => {
           <div className="btnCart flex items-center justify-between gap-8">
             <div className="cart text-blue-900">
               <Link href="/Cart">
-              <FontAwesomeIcon icon={faCartShopping} className="size-6" />
+              <FontAwesomeIcon icon={faCartShopping} className="size-8 " />
+              <span className="ml-2">{cartTotalQuantity}</span>
               </Link>
             </div>
             <div className="btn-sign w-36 h-9 border-2 rounded-lg border-blue-900 flex items-center justify-center gap-2 size-4 text-blue-900 font-sans font-semibold">
@@ -117,7 +119,7 @@ const NavBar = () => {
               Hospitals
             </a>
             <Link
-              href="/Healthcare"
+              href="/Blogs"
               onMouseEnter={() => handleModalOpen('Healthcare')}
               onMouseLeave={handleModalClose}
               className="text-blue-900 hover:underline"
