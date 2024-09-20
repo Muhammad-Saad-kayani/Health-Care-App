@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import NavForPhar from "../Components/NavForPhar";
 import Footer from "../Components/Footer";
