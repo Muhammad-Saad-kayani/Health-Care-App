@@ -70,11 +70,13 @@ const NavBar = () => {
               <span className="ml-2">{cartTotalQuantity}</span>
               </Link>
             </div>
+            <Link href="/Admin">
             <div className="btn-sign w-36 h-9 border-2 rounded-lg border-blue-900 flex items-center justify-center gap-2 size-4 text-blue-900 font-sans font-semibold">
               <button className="login">Login</button>
               /
               <button className="signup">Signup</button>
             </div>
+            </Link>
           </div>
         </section>
 
