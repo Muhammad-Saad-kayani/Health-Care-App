@@ -1,13 +1,16 @@
-// /components/DoctorForm.jsx
-
 "use client";
 
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addDoctor } from "../Redux/CreateSlice";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import DoctorList from "../Components/DoctorList";
 
 const DoctorForm = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
+  const doctors = useSelector((state) => state?.doctor?.doctors || []); 
 
   const [formData, setFormData] = useState({
     name: "",
@@ -15,10 +18,10 @@ const DoctorForm = () => {
     degree: "",
     experience: "",
     category: "",
-    image: null, // Base64 string
+    image: null,
   });
 
-  const [imagePreview, setImagePreview] = useState(null); // For image preview
+  const [imagePreview, setImagePreview] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +31,6 @@ const DoctorForm = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      // Convert image file to Base64 string
       const reader = new FileReader();
       reader.onloadend = () => {
         setFormData({ ...formData, image: reader.result });
@@ -52,14 +54,24 @@ const DoctorForm = () => {
     setImagePreview(null);
   };
 
+  const handleLogout = () => {
+    router.push("/Pharmacy");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center bg-gray-50 p-8 rounded-md shadow-md">
       <h1 className="text-2xl font-bold mb-6">Add Doctor</h1>
+
       <form
         onSubmit={handleSubmit}
         className="space-y-4 w-full max-w-md"
         encType="multipart/form-data"
       >
+        <Link href="/DashBoard">
+          <button className="mt-4 bg-green-500 text-white p-2 rounded w-full">
+            Go To Dashboard
+          </button>
+        </Link>
         <div>
           <label htmlFor="name" className="block text-sm font-medium">
             Doctor's Name
@@ -166,7 +178,14 @@ const DoctorForm = () => {
         >
           Add Doctor
         </button>
+        <button
+          onClick={handleLogout}
+          className="mt-4 bg-red-500 text-white p-2 rounded w-full"
+        >
+          Logout
+        </button>
       </form>
+
     </div>
   );
 };

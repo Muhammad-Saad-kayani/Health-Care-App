@@ -1,10 +1,16 @@
 "use client";
 
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteDoctor } from "../Redux/CreateSlice"; // Ensure correct import path
 
 const DoctorList = () => {
-  const doctors = useSelector((state) => state?.doctor?.doctors || []); 
+  const dispatch = useDispatch();
+  const doctors = useSelector((state) => state?.doctor?.doctors || []);
+
+  const handleDelete = (index) => {
+    dispatch(deleteDoctor(index));
+  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
@@ -33,6 +39,13 @@ const DoctorList = () => {
             <p className="text-sm text-gray-500">Degree: {doctor.degree}</p>
             <p className="text-sm text-gray-500">Experience: {doctor.experience} years</p>
             <p className="text-sm text-gray-500">Category: {doctor.category}</p>
+
+            <button
+              onClick={() => handleDelete(index)}
+              className="mt-2 bg-red-500 text-white p-2 rounded"
+            >
+              Delete
+            </button>
           </div>
         ))
       )}

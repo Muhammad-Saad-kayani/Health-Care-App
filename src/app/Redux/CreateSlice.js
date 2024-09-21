@@ -1,10 +1,8 @@
-// /redux/doctorSlice.js
 
 "use client";
 
 import { createSlice } from "@reduxjs/toolkit";
 
-// Function to load state from localStorage
 const loadStateFromLocalStorage = () => {
   try {
     const serializedState = localStorage.getItem("doctorState");
@@ -27,7 +25,6 @@ const loadStateFromLocalStorage = () => {
   }
 };
 
-// Function to save state to localStorage
 const saveStateToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state);
@@ -37,7 +34,6 @@ const saveStateToLocalStorage = (state) => {
   }
 };
 
-// Initialize state
 const initialState = loadStateFromLocalStorage();
 
 const doctorSlice = createSlice({
@@ -115,9 +111,13 @@ const doctorSlice = createSlice({
         degree: action.payload.degree,
         experience: action.payload.experience,
         category: action.payload.category,
-        image: action.payload.image, // Base64 string
+        image: action.payload.image,
       };
       state.doctors.push(doctor);
+      saveStateToLocalStorage(state);
+    },
+    deleteDoctor: (state, action) => {
+      state.doctors.splice(action.payload, 1);
       saveStateToLocalStorage(state);
     },
   },
@@ -130,6 +130,7 @@ export const {
   clearCart,
   getTotals,
   addDoctor,
+  deleteDoctor,
 } = doctorSlice.actions;
 
 export default doctorSlice.reducer;
