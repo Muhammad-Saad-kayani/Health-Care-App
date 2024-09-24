@@ -2,10 +2,9 @@
 
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addDoctor } from "../Redux/CreateSlice";
+import { addDoctor } from "../Redux/DoctorSlice";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import DoctorList from "../Components/DoctorList";
 
 const DoctorForm = () => {
   const dispatch = useDispatch();
@@ -43,6 +42,7 @@ const DoctorForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addDoctor(formData));
+    router.push("/DashBoardDoc");
     setFormData({
       name: "",
       bio: "",
@@ -61,17 +61,19 @@ const DoctorForm = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-50 p-8 rounded-md shadow-md">
       <h1 className="text-2xl font-bold mb-6">Add Doctor</h1>
-
+      <Link href="/Admin-panel">
+      <button
+          type="submit"
+          className="mb-5 bg-green-500 text-white p-2 rounded w-96"
+        >
+          Go To Panel
+        </button>
+        </Link>
       <form
         onSubmit={handleSubmit}
         className="space-y-4 w-full max-w-md"
         encType="multipart/form-data"
       >
-        <Link href="/DashBoard">
-          <button className="mt-4 bg-green-500 text-white p-2 rounded w-full">
-            Go To Dashboard
-          </button>
-        </Link>
         <div>
           <label htmlFor="name" className="block text-sm font-medium">
             Doctor's Name
