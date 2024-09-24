@@ -1,4 +1,3 @@
-
 "use client";
 
 import { createSlice } from "@reduxjs/toolkit";
@@ -44,21 +43,23 @@ const doctorSlice = createSlice({
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );
-
+    
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
       } else {
         const tempProduct = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(tempProduct);
       }
-
-      state.cartTotalAmount = state.cartItems.reduce(
-        (total, item) => total + item.price * item.cartQuantity,
-        0
+    
+      state.cartTotalAmount = parseFloat(
+        state.cartItems.reduce(
+          (total, item) => total + item.price * item.cartQuantity,
+          0
+        ).toFixed(2)
       );
-
       saveStateToLocalStorage(state);
-    },
+    }, 
+
     removeFromCart(state, action) {
       state.cartItems = state.cartItems.filter(
         (cartItem) => cartItem.id !== action.payload.id
