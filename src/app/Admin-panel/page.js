@@ -16,7 +16,7 @@ const AdminPanel = () => {
         />
         <h1 className="text-3xl font-bold mb-7">Admin Panel</h1>
         <div className="flex justify-center space-x-4">
-        <Link href="/DashBoardDoc">
+        <Link href="/Admin-dashboard">
           <button className="bg-blue-500 mb-4 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition">
             Manage Doctors
           </button>
