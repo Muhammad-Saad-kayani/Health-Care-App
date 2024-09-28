@@ -1,5 +1,5 @@
+"use client"
 import Image from "next/image";
-import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Slider from "./Components/slider";
 import LandingCard from "./Components/landingPage";
@@ -8,19 +8,27 @@ import Service from "./Components/service";
 import Career from "./Components/career";
 import Article from "./Components/article";
 import Footer1 from "./Components/footer1";
+import NavBar from "./Components/Navbar";
 
-export default function Home() {
+
+   
+
+import React from 'react'
+
+const page = () => {
   return (
-    <>
-      <Navbar />
-      <Slider />
-      <LandingCard />
-      <MedicineCard />
-      <Service />
-      <Career />
-      <Article />
-      <Footer1 />
-      <Footer />
-    </>
-  );
+   <>
+   <NavBar />
+   <Slider />
+   <LandingCard />
+   <MedicineCard />
+   <Service />
+   <Career />
+   <Article />
+   <Footer1 />
+   <Footer />
+ </>
+  )
 }
+
+export default page
