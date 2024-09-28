@@ -8,7 +8,7 @@ const loadDoctorStateFromLocalStorage = () => {
     return serializedState ? JSON.parse(serializedState) : { doctors: [] };
   } catch (e) {
     console.error("Could not load state from localStorage", e);
-    return { doctors: [] };
+    return { doctors: [] }; 
   }
 };
 
@@ -36,12 +36,17 @@ const doctorSlice = createSlice({
         category: action.payload.category,
         image: action.payload.image,
       };
+      if (!Array.isArray(state.doctors)) {
+        state.doctors = []; 
+      }
       state.doctors.push(doctor);
       saveDoctorStateToLocalStorage(state);
     },
     removeDoctor: (state, action) => {
-      state.doctors.splice(action.payload, 1);
-      saveDoctorStateToLocalStorage(state);
+      if (Array.isArray(state.doctors)) {
+        state.doctors.splice(action.payload, 1);
+        saveDoctorStateToLocalStorage(state);
+      }
     },
   },
 });

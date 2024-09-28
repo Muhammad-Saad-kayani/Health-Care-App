@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -5,8 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationCrosshairs, faMagnifyingGlass, faCartShopping , faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from "react-redux";
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-const NavBar = () => {
+
+const AdminNavbar = () => {
   const {cartTotalQuantity} = useSelector((state) => state.cart)
 
   const [modalType, setModalType] = useState(null);
@@ -14,9 +17,16 @@ const NavBar = () => {
   const handleModalOpen = (type) => setModalType(type);
   const handleModalClose = () => setModalType(null);
 
+  const router = useRouter();
+
+  const handleLogout = () => {
+    router.push("/Pharmacy");
+  };
+
   return (
     <>
       <nav className="w-full bg-white py-5 px-10 flex flex-wrap gap-2 shadow-custom-light fixed top-0 z-50">
+        {/* Top Row */}
         <section className="navsec w-full flex items-center justify-between mb-2">
           <section className="logo flex items-center gap-2">
             <div>
@@ -29,9 +39,8 @@ const NavBar = () => {
             </div>
             <div className="text-xl font-semibold font-sans">Healthwire</div>
           </section>
-
           <div className="searchsec w-600 flex items-center">
-            <div className="search h-12 flex items-center border-2 border-blue-300 rounded-lg overflow-hidden relative">
+            <div className="search h-12 flex items-center border-2 border-blue-300 rounded-lg overflow-hidden">
               <div className="px-2 h-8 border-r border-blue-400 flex items-center justify-center gap-2 text-center">
                 <div className="location flex items-center justify-center text-blue-700">
                   <FontAwesomeIcon icon={faLocationCrosshairs} className="size-4" />
@@ -69,16 +78,18 @@ const NavBar = () => {
               <span className="ml-2">{cartTotalQuantity}</span>
               </Link>
             </div>
-            <Link href="/Admin">
-            <div className="btn-sign w-36 h-9 border-2 rounded-lg border-blue-900 flex items-center justify-center gap-2 size-4 text-blue-900 font-sans font-semibold">
-              <button className="login">Login</button>
-              /
-              <button className="signup">Signup</button>
-            </div>
-            </Link>
+            <button
+            onClick={handleLogout}
+            className="mt-4 bg-blue-500 text-white p-2 rounded w-28"
+          >
+            Log Out
+          </button>
+
+
           </div>
         </section>
 
+        {/* Bottom Row with Navigation Links */}
         <section className="navsec nav-links w-full py-2 flex justify-between gap-8">
           <div className="flex justify-center gap-8">
             <Link href="/" className="text-blue-900 hover:underline">
@@ -128,12 +139,21 @@ const NavBar = () => {
             </Link>
           </div>
           <div className="pharm text-blue-900 font-semibold font-sans border-b border-blue-900">
-            <a href="/Franchises">Pharmacy Franchise</a>
+          
+          <Link href="/Admin-panel">
+          <button
+          type="submit"
+          className="  text-blue-900 p-1 rounded"
+          >
+          Go To Panel
+          </button>
+        </Link>
           </div>
         </section>
       </nav>
+
     </>
   );
 };
 
-export default NavBar;
+export default AdminNavbar;

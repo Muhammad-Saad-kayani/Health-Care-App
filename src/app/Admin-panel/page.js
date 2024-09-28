@@ -21,9 +21,11 @@ const AdminPanel = () => {
             Manage Doctors
           </button>
           </Link>
+          <Link href="/AdminDashHospital">
           <button className="bg-green-500 mb-4  text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 transition">
             Manage Hospitals
           </button>
+          </Link>
         </div>
       </div>
     </div>
