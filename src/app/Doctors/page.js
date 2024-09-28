@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useSelector } from "react-redux";
 import NavBar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -43,11 +44,12 @@ const DoctorList = () => {
                   <p className="text-gray-600 mb-2">Experience: {doctor.experience} years</p>
                   <p className="text-gray-600 mb-2">Category: {doctor.category}</p>
 
+                <Link  href="/BookAppointment">
                   <button
                     className="mt-4 bg-red-500 text-white px-4 rounded hover:bg-red-600 w-32"
                   >
                     Book Appointment
-                  </button>
+                  </button></Link>
                 </div>
               </div>
             ))
