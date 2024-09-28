@@ -111,8 +111,13 @@ const NavBar = () => {
               Doctors
             </a>
             <a
+<<<<<<< HEAD
               href="#"
               onMouseEnter={() => handleModalOpen('hospitals')}
+=======
+              href="/Hospitals"
+              onMouseEnter={() => handleModalOpen("hospitals")}
+>>>>>>> 99b9be2096414ecad1d5ed08bc195aa3a069ac45
               onMouseLeave={handleModalClose}
               className="text-blue-900 hover:underline"
             >
