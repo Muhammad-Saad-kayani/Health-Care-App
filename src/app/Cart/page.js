@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart, clearCart, decreaseCart, removeFromCart , getTotals } from "../Redux/CreateSlice";
+import { addToCart, clearCart, decreaseCart, removeFromCart , getTotals } from "../Redux/CartSlice";
 import Link from "next/link";
 
 const Cart = () => {

@@ -3,7 +3,7 @@
 "use client"
 
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/CreateSlice";
+import { addToCart } from "../Redux/CartSlice";
 
 export const useCartHandler = () => {
   const dispatch = useDispatch();

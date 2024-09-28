@@ -11,86 +11,78 @@ import { useCartHandler } from "../Components/CartReusable";
 
 export const Cardsdata = [
   {
+    id: 1,
     img: "/sec1img1.png",
     title: "Eziday (25mg) 20 Tablets",
     price: 43.2,
   },
   {
+    id: 2,
     img: "/sec1img2.png",
     title: "Carveda (6.25mg) 30 Tablets",
     price: 102.6,
   },
   {
+    id: 3,
     img: "/sec1img3.webp",
     title: "Co-Eziday (50/12.5mg) 20 Tab",
     price: 229,
   },
   {
+    id: 4,
     img: "/sec1img4.png",
     title: "Zurig (40mg) 20 Tablets",
     price: 294,
   },
   {
+    id: 5,
     img: "/sec2img1.webp",
     title: "Eziday (25mg) 20 Tablets",
     price: 43.2,
   },
   {
+    id: 6,
     img: "/sec2img2.webp",
     title: "Carveda (6.25mg) 30 Tablets",
     price:  102.67,
   },
   {
+    id: 7,
     img: "/sec2img3.webp",
     title: "Co-Eziday (50/12.5mg) 20 Tab",
     price: 229.5,
   },
   {
+    id: 8,
     img: "/sec2img4.png",
     title: "Zurig (40mg) 20 Tablets",
     price: 294.5,
   },
   {
+    id: 9,
     img: "/sec3img1.webp",
     title: "Eziday (25mg) 20 Tablets",
     price: 43.2,
   },
   {
+    id: 10,
     img: "/sec3img2.webp",
     title: "Carveda (6.25mg) 30 Tablets",
     price: 102.67,
   },
   {
+    id: 11,
     img: "/sec3img3.webp",
     title: "Co-Eziday (50/12.5mg) 20 Tab",
     price: 229.5,
   },
   {
+    id: 12,
     img: "/sec3img4.webp",
     title: "Zurig (40mg) 20 Tablets",
     price: 294.5,
   },
-  {
-    img: "/sec4img1.webp",
-    title: "Eziday (25mg) 20 Tablets",
-    price:  43.2,
-  },
-  {
-    img: "/sec4img2.png",
-    title: "Carveda (6.25mg) 30 Tablets",
-    price: 102.67,
-  },
-  {
-    img: "/sec4img3.png",
-    title: "Co-Eziday (50/12.5mg) 20 Tab",
-    price: 229.5,
-  },
-  {
-    img: "/sec4img4.webp",
-    title: "Zurig (40mg) 20 Tablets",
-    price: 294.5,
-  },
-];
+]
 
 const BonesCare = () => {
   const { handleAddToCart } = useCartHandler();

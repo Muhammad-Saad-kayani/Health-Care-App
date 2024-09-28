@@ -2,14 +2,14 @@
 
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteDoctor } from "../Redux/CreateSlice"; // Ensure correct import path
+import { removeDoctor } from "../Redux/DoctorSlice";
 
 const DoctorList = () => {
   const dispatch = useDispatch();
-  const doctors = useSelector((state) => state?.doctor?.doctors || []);
+  const doctors = useSelector((state) => state.doctor.doctors || []);
 
   const handleDelete = (index) => {
-    dispatch(deleteDoctor(index));
+    dispatch(removeDoctor(index));
   };
 
   return (
@@ -20,32 +20,34 @@ const DoctorList = () => {
         doctors.map((doctor, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-md p-4 shadow-md bg-white"
+            className="flex border border-gray-300 rounded-md p-4 shadow-md bg-white"
           >
             {doctor.image ? (
               <img
                 src={doctor.image}
                 alt={doctor.name}
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-40 h-40 object-cover rounded-full border-2 border-gray-300 mr-4"
               />
             ) : (
-              <div className="w-full h-48 bg-gray-200 rounded-md mb-4 flex items-center justify-center">
+              <div className="w-40 h-40 bg-gray-200 rounded-full border-2 border-gray-300 mr-4 flex items-center justify-center">
                 <span className="text-gray-500">No Image Available</span>
               </div>
             )}
 
-            <h2 className="text-lg font-bold mb-2">{doctor.name}</h2>
-            <p className="text-gray-600 mb-2">{doctor.bio}</p>
-            <p className="text-sm text-gray-500">Degree: {doctor.degree}</p>
-            <p className="text-sm text-gray-500">Experience: {doctor.experience} years</p>
-            <p className="text-sm text-gray-500">Category: {doctor.category}</p>
+            <div className="flex flex-col justify-between">
+              <h2 className="text-lg font-bold mb-2">{doctor.name}</h2>
+              <p className="text-gray-600 mb-2">{doctor.bio}</p>
+              <p className="text-sm text-gray-500">Degree: {doctor.degree}</p>
+              <p className="text-sm text-gray-500">Experience: {doctor.experience} years</p>
+              <p className="text-sm text-gray-500">Category: {doctor.category}</p>
 
-            <button
-              onClick={() => handleDelete(index)}
-              className="mt-2 bg-red-500 text-white p-2 rounded"
-            >
-              Delete
-            </button>
+              <button
+                onClick={() => handleDelete(index)}
+                className="mt-2 bg-red-500 w-20 h-8 text-white rounded"
+              >
+                Delete
+              </button>
+            </div>
           </div>
         ))
       )}

@@ -1,18 +1,16 @@
-
 "use client";
 
 import { createSlice } from "@reduxjs/toolkit";
 
-const loadStateFromLocalStorage = () => {
+const loadCartStateFromLocalStorage = () => {
   try {
-    const serializedState = localStorage.getItem("doctorState");
+    const serializedState = localStorage.getItem("cartState");
     return serializedState
       ? JSON.parse(serializedState)
       : {
           cartItems: [],
           cartTotalQuantity: 0,
           cartTotalAmount: 0,
-          doctors: [],
         };
   } catch (e) {
     console.error("Could not load state from localStorage", e);
@@ -20,25 +18,24 @@ const loadStateFromLocalStorage = () => {
       cartItems: [],
       cartTotalQuantity: 0,
       cartTotalAmount: 0,
-      doctors: [],
     };
   }
 };
 
-const saveStateToLocalStorage = (state) => {
+const saveCartStateToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state);
-    localStorage.setItem("doctorState", serializedState);
+    localStorage.setItem("cartState", serializedState);
   } catch (e) {
     console.error("Could not save state to localStorage", e);
   }
 };
 
-const initialState = loadStateFromLocalStorage();
+const initialCartState = loadCartStateFromLocalStorage();
 
-const doctorSlice = createSlice({
+const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState: initialCartState,
   reducers: {
     addToCart: (state, action) => {
       const itemIndex = state.cartItems.findIndex(
@@ -52,19 +49,22 @@ const doctorSlice = createSlice({
         state.cartItems.push(tempProduct);
       }
 
-      state.cartTotalAmount = state.cartItems.reduce(
-        (total, item) => total + item.price * item.cartQuantity,
-        0
+      state.cartTotalAmount = parseFloat(
+        state.cartItems.reduce(
+          (total, item) => total + item.price * item.cartQuantity,
+          0
+        ).toFixed(2)
       );
-
-      saveStateToLocalStorage(state);
+      saveCartStateToLocalStorage(state);
     },
+    
     removeFromCart(state, action) {
       state.cartItems = state.cartItems.filter(
         (cartItem) => cartItem.id !== action.payload.id
       );
-      saveStateToLocalStorage(state);
+      saveCartStateToLocalStorage(state);
     },
+    
     decreaseCart(state, action) {
       const itemIndex = state.cartItems.findIndex(
         (cartItem) => cartItem.id === action.payload.id
@@ -76,12 +76,14 @@ const doctorSlice = createSlice({
           state.cartItems.splice(itemIndex, 1);
         }
       }
-      saveStateToLocalStorage(state);
+      saveCartStateToLocalStorage(state);
     },
+    
     clearCart(state) {
       state.cartItems = [];
-      saveStateToLocalStorage(state);
+      saveCartStateToLocalStorage(state);
     },
+
     getTotals(state) {
       let { total, quantity } = state.cartItems.reduce(
         (cartTotal, cartItem) => {
@@ -102,23 +104,7 @@ const doctorSlice = createSlice({
       state.cartTotalQuantity = quantity;
       state.cartTotalAmount = total;
 
-      saveStateToLocalStorage(state);
-    },
-    addDoctor: (state, action) => {
-      const doctor = {
-        name: action.payload.name,
-        bio: action.payload.bio,
-        degree: action.payload.degree,
-        experience: action.payload.experience,
-        category: action.payload.category,
-        image: action.payload.image,
-      };
-      state.doctors.push(doctor);
-      saveStateToLocalStorage(state);
-    },
-    deleteDoctor: (state, action) => {
-      state.doctors.splice(action.payload, 1);
-      saveStateToLocalStorage(state);
+      saveCartStateToLocalStorage(state);
     },
   },
 });
@@ -129,8 +115,6 @@ export const {
   decreaseCart,
   clearCart,
   getTotals,
-  addDoctor,
-  deleteDoctor,
-} = doctorSlice.actions;
+} = cartSlice.actions;
 
-export default doctorSlice.reducer;
+export default cartSlice.reducer;
