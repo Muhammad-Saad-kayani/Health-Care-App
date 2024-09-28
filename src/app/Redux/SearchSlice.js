@@ -1,5 +1,9 @@
+"use client"
+
+
 import { createSlice } from '@reduxjs/toolkit';
-import { Cardsdata } from '../components/Card1'; // Import your Cardsdata
+import Cardsdata from "../Components/Card1";
+
 
 const searchSuggestions = (query) => {
   const lowercaseQuery = query.toLowerCase();
