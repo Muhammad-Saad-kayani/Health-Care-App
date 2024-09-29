@@ -7,7 +7,7 @@ function Cbc() {
     <>
       <NavBar />
 
-      <section className="containers mt-40 bg-white">
+      <section className="containers mt-40 bg-white mb-20">
         <div className="navsec w-full flex  justify-between flex-wrap gap-2">
           <div className="w-full flex justify-between">
             <div className="w-[50%] flex  flex-col">
@@ -146,9 +146,155 @@ function Cbc() {
                   <li>
                     Bone marrow disorders such as myelodysplastic syndromes
                   </li>
-                  <li>Blood cancers (<span className="text-[#1e4275] font-sans font-bold">leukemia </span> and <span className="text-[#1e4275] font-sans font-bold">lymphoma </span>)</li>
+                  <li>
+                    Blood cancers (
+                    <span className="text-[#1e4275] font-sans font-bold">
+                      leukemia{" "}
+                    </span>{" "}
+                    and{" "}
+                    <span className="text-[#1e4275] font-sans font-bold">
+                      lymphoma{" "}
+                    </span>
+                    )
+                  </li>
                   <li>Side effects of any medication or chemotherapy</li>
                 </ul>
+              </div>
+              <div className="w-full font-sans font-medium mt-8">
+                How to Interpret the Complete Blood Count (CBC) Test Results?
+              </div>
+              <div className="w-full font-sans text-[0.8rem] text-gray-600 mt-8">
+                Following is the normal range of complete blood count in adults
+                and infants
+              </div>
+              <div className="w-full font-sans font-medium mt-8">
+                <table className="min-w-full border-collapse border border-gray-400">
+                  <thead>
+                    <tr>
+                      <th className="border text-center border-gray-300 px-4 py-2">
+                        Test
+                      </th>
+                      <th className="border text-center border-gray-300 px-4 py-2">
+                        Normal Range{" "}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                        Red Blood Cell Count <br />
+                        <br />
+                        <br />
+                        (RBCs)
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>Male: 4.35 – 5.65 million cells/μL </li>
+                          <li>Female: 3.92 – 5.13 million cells/μL</li>
+                          <li>Infants/Children: 3.8 – 5.5 million cells/μL </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                        White Blood Cells Count <br />
+                        <br />
+                        <br />
+                        (WBCs)
+                        <br />
+                        <br />
+                        <br />
+                        Differential Leukocyte Count
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>Neutrophils – (35-85)% </li>
+                          <li>Lymphocytes – (20 -50)%</li>
+                          <li>Monocytes – (2-12)% </li>
+                          <li>Eosinophils – (0-7)% </li>
+                          <li>Basophils – (0-2)%</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                        Hemoglobin
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>Male: 13.2 – 16.6 grams/dL </li>
+                          <li>Female: 11.6 – 15 grams/dL</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                        Hematocrit
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>Male: (38.3 – 48.6) % </li>
+                          <li>Female: (35.5 – 44.9) %</li>
+                          <li>Infants/Child – (31 – 43) %</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                        Platelet Count
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>Male: 135 – 317 billion cells/L </li>
+                          <li>Female: 157 – 371 billion cells/L</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                        Mean Corpuscular Volume (MCV)
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>Males: 82-102 fL </li>
+                          <li>Females: 78-101 fL</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                        Mean Corpuscular Hemoglobin (MCH)
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>27-34 pg </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                      Mean Corpuscular Hemoglobin Concentration (MCHC) 
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>31-35 gm/dL </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border text-center text-sm  text-gray-600 border-gray-300 px-4 py-6">
+                      Mean Platelet Volume (MPV) 
+
+ 
+                      </td>
+                      <td className="border text-center text-sm text-gray-600 border-gray-300 px-4 py-6">
+                        <ul className="w-full leading-10 list-disc pl-5">
+                          <li>6.0-9.5 fL </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
@@ -188,7 +334,7 @@ function Cbc() {
         </div>
       </section>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
